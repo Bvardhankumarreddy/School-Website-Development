@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Title>
+Guardian's Section
+</Title>
+<div style = "background-color:Orange"><h1><font size="10">Guardian's Section</font></h1></div>
+</head>
+<script>  
+function validateform(){  
+var Username =document.myform.Username .value;  
+var Password =document.myform.Password.value;  
+  
+if (Username ==null || Username ==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(Password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+
+
+</script>  
+
+<body align  ="middle" bgcolor= "Pink" > 
+
+<form name="myform" method="post" action="" onsubmit="return validateform()" >  
+Username: <input type="text" name="Username"><br/>  <br>
+Password: <input type="Password" name="Password"><br/>  <br>
+<input type="submit" value="Login">  
+</form> 
+</html>

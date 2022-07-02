@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Registration Form</title>
+
+<style type="text/css">
+body{
+    margin:0;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+ background-color: #606060;
+
+}
+
+h2{
+font-family: 'Times New Roman', Times, serif;
+padding-top: 70px;
+font-size: 25px;
+}
+label{
+font-size: 20px;
+font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    width: 600px;
+    max-width: 600px;
+    margin:1rem;
+    padding:1rem;
+     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: #ffffff;   
+}
+.form-input{
+ display: block;
+    width: 600px;
+    padding:0.75rem;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border:1px solid #dddddd;
+    outline:none;
+    background:#eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+body{
+text-align: center;
+}
+</style>
+</head>
+<div class ="container">
+<body>
+
+<form target="post" action="#" >
+<h2>Online Registration Form</h2><br>
+<label for="usrname">Username:<br></label>
+<input type="text" id="usrname" name="usrname" pattern=".{8,}" title="Eight or more
+characters" required><br><br>
+
+<label>Password :<br>
+<input name="password" id="password" type="password" onkeyup='check();' />
+</label>
+<br><br>
+
+<label>Confirm Password:<br>
+<input type="password" name="confirm_password" id="confirm_password"
+onkeyup='check();' />
+<span id='message'></span>
+</label><br><br><br>
+
+<label for="don">Gender:</label> <br>
+<input type="radio" id="male" name="gender" value="male" required><label
+for="female">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br><br>
+
+<label for="add">Address:</label><br>
+<textarea id="w3review" name="Address" rows="4" cols="50"
+required></textarea><br><br>
+
+<label for="prof">Profession:</label>
+<select name="prof" id="prof" required>
+<option value="Princ">Principal</option>
+<option value="VcPrinc">Vice Principal</option>
+<option value="Teach">Teacher</option>
+<option value="Stud">Student</option>
+<option value="Driv">Driver</option>
+</select><br><br><br>
+
+<input type="submit" value="Submit" ><br><br><br>
+</form>
+<script>
+var check = function() {
+if (document.getElementById('password').value ==
+document.getElementById('confirm_password').value) {
+document.getElementById('message').style.color = 'green';
+document.getElementById('message').innerHTML = 'matching';
+} else {
+document.getElementById('message').style.color = 'red';
+document.getElementById('message').innerHTML = 'not matching';
+}
+}
+</script>
+</body>
+</div>
+</html
